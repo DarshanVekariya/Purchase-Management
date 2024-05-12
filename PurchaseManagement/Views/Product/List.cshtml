@@ -1,0 +1,66 @@
+﻿@using Bussiness.Product
+@model List<Products>
+
+@{
+    ViewBag.Title = "Product Management";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    table th{
+        width:33%;
+    }
+</style>
+<div class="container mt-5">
+    <!-- Add Product Form -->
+    <div>
+        <h3>Add Product</h3>
+            <div class="form-group">
+                <label for="productName">Name:</label>
+                <input type="text" placeholder="i-phone" autocomplete="off" class="form-control" id="productName" required />
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Price:</label>
+                <input type="text" placeholder="228785.45" autocomplete="off" class="form-control" id="productPrice" required pattern="\d+(\.\d{2})?" title="Enter a valid price (e.g., 10.10)" />
+            </div>
+            <button id="addProduct" class="btn btn-primary mt-2">Add New</button>
+    </div>
+
+    <!-- Product List -->
+    <div id="productList" class="mt-5" style="margin-bottom:100px;">
+        <h3>Product List</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr data-id="@product.Id">
+                        <td>
+                            <label id="namelbl">@product.Name</label>
+                            <input type="text" class="form-control editProductName" style="display:none;" id="nametext" value="@product.Name" />
+                        </td>
+                        <td>
+                            <label id="pricelbl">@product.Price</label>
+                            <input type="number" class="form-control editProductPrice" style="display:none;" id="pricetext" value="@product.Price" />
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-primary editProduct">Edit</button>
+                            <button class="btn btn-sm btn-secondary cancelProduct" style="display:none;">Cancel</button>
+                            <button class="btn btn-sm btn-success saveProduct" style="display:none;">Save</button>
+                            <button class="btn btn-sm btn-danger deleteProduct">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/js/Product.js"></script><script src="~/js/Product.js"></script>
+<!-- Bootstrap JS and jQuery -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>

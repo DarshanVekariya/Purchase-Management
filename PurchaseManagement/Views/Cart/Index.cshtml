@@ -1,0 +1,85 @@
+﻿@using Bussiness.Purchaseorder
+@model List<PurchaseOrder>
+@{
+    ViewData["Title"] = "Index";
+}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    @if (Model.Count > 0)
+    {
+        <div class="row">
+            <div>
+                <span class="float-right">Total : $@ViewBag.Total</span>
+            </div>
+        </div>
+    }
+    <form method="post">
+        <div class="row">
+            @for (var i = 0; i < Model.Count; i++)
+            {
+                var item = Model[i];
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.ProductName</h5>
+                            <p class="card-text">Price: $@item.ProductPrice</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="input-group" style="width:60%;">
+                                    <span class="input-group-btn">
+                                        <button type="button" style="height: -webkit-fill-available;" class="btn btn-sm btn-outline-secondary decrease">-</button>
+                                    </span>
+                                    <input type="text" name="[@i].Quantity" class="form-control quantity-input" value="1" min="1" readonly>
+                                    <span class="input-group-btn">
+                                        <button type="button" style="height: -webkit-fill-available;" class="btn btn-sm btn-outline-secondary increase">+</button>
+                                    </span>
+                                </div>
+                                <a asp-action="RemoveItem" asp-controller="Cart" asp-route-productId="@item.ProductId" class="btn btn-sm btn-danger @ViewBag.Total delete-button mr-2">Delete</a>
+                            </div>
+                            <input type="hidden" name="[@i].UserId" value="@item.UserId" />
+                            <input type="hidden" name="[@i].ProductName" value="@item.ProductName" />
+                            <input type="hidden" name="[@i].ProductPrice" value="@item.ProductPrice" />
+                            <input type="hidden" name="[@i].ProductId" value="@item.ProductId" />
+                        </div>
+                    </div>
+                </div>
+            }
+            @if(Model.Count == 0)
+            {
+                <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+                    Your card is empty <a asp-action="Index" asp-controller="Product">Select Product</a>
+                   
+                </div>
+            }
+        </div>
+        @if (Model.Count > 0)
+        {
+            <button class="btn btn-sm btn-primary buy-now-button" type="submit">Buy</button>
+        }
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // JavaScript to handle quantity change
+    document.querySelectorAll('.card').forEach(card => {
+        const decreaseBtn = card.querySelector('.decrease');
+        const increaseBtn = card.querySelector('.increase');
+        const quantityInput = card.querySelector('.quantity-input');
+
+        decreaseBtn.addEventListener('click', () => {
+            const currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        increaseBtn.addEventListener('click', () => {
+            const currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        });
+    });
+</script>

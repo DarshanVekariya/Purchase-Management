@@ -1,0 +1,14 @@
+D:\PurchaseManagement\Bussiness\bin\Debug\net8.0\Bussiness.deps.json
+D:\PurchaseManagement\Bussiness\bin\Debug\net8.0\Bussiness.runtimeconfig.json
+D:\PurchaseManagement\Bussiness\bin\Debug\net8.0\Bussiness.dll
+D:\PurchaseManagement\Bussiness\bin\Debug\net8.0\Bussiness.pdb
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.csproj.AssemblyReference.cache
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.GeneratedMSBuildEditorConfig.editorconfig
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.AssemblyInfoInputs.cache
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.AssemblyInfo.cs
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.csproj.CoreCompileInputs.cache
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.dll
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\refint\Bussiness.dll
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.pdb
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\Bussiness.genruntimeconfig.cache
+D:\PurchaseManagement\Bussiness\obj\Debug\net8.0\ref\Bussiness.dll

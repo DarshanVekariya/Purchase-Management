@@ -1,0 +1,15 @@
+D:\PurchaseManagement\Access\bin\Debug\net8.0\Access.deps.json
+D:\PurchaseManagement\Access\bin\Debug\net8.0\Access.dll
+D:\PurchaseManagement\Access\bin\Debug\net8.0\Access.pdb
+D:\PurchaseManagement\Access\bin\Debug\net8.0\Bussiness.dll
+D:\PurchaseManagement\Access\bin\Debug\net8.0\Bussiness.pdb
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.csproj.AssemblyReference.cache
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.GeneratedMSBuildEditorConfig.editorconfig
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.AssemblyInfoInputs.cache
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.AssemblyInfo.cs
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.csproj.CoreCompileInputs.cache
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.csproj.Up2Date
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.dll
+D:\PurchaseManagement\Access\obj\Debug\net8.0\refint\Access.dll
+D:\PurchaseManagement\Access\obj\Debug\net8.0\Access.pdb
+D:\PurchaseManagement\Access\obj\Debug\net8.0\ref\Access.dll
